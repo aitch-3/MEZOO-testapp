@@ -1,11 +1,13 @@
 <ion-header>
-    <ion-toolbar>
-
-    </ion-toolbar>
+    <ion-toolbar></ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <div class="form_wrapper">
+    <div class="log_form_wrapper">
+        <svg height="100%" width="100%">
+            <ellipse cx="50%" cy="0" rx="160%" ry="100%" fill="#E93B44" />
+        </svg>
+
         <div class="form_bg">
             <p class="page_title">Login</p>
             <hr class="title_underbar" width="10%">
@@ -26,8 +28,8 @@
                 </ion-item>
             </ion-list>
         </div>
-        <div class="form_bg_overlay" [ngStyle]="{'bottom.px': overlayRect ? -overlayRect.height/2 : 0}"></div>
     </div>
+
     <div class="btn_wrapper">
         <ion-button shape="round" color="dark">Login</ion-button>
     </div>
@@ -43,12 +45,12 @@
                     </ion-button>
                 </ion-col>
                 <ion-col no-padding size="4">
-                    <ion-button fill="outline">
+                    <ion-button fill="outline" color="dark">
                         <ion-icon slot="icon-only" name="logo-facebook"></ion-icon>
                     </ion-button>
                 </ion-col>
                 <ion-col no-padding size="4">
-                    <ion-button fill="outline">
+                    <ion-button fill="outline" color="dark">
                         <ion-icon slot="icon-only" name="logo-twitter"></ion-icon>
                     </ion-button>
                 </ion-col>
@@ -57,7 +59,9 @@
     </div>
 
     <div class="signup_wrapper">
-        Don't have an account? <a [routerLink]="'/signup'"  routerDirection="forward">SIGN UP</a>
+        Don't have an account? <a (click)="openSignupModal()">SIGN UP</a>
     </div>
-
+    <div class="findpw_wrapper">
+        Forgot password? <a (click)="openFindPasswordModal()">FIND PASSWORD</a>
+    </div>
 </ion-content>

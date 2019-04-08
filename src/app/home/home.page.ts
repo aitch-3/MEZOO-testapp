@@ -1,4 +1,7 @@
-import { Component, OnInit, NgZone } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+
+import { SignupPage } from '../signup/signup.page';
 
 @Component({
   selector: 'app-home',
@@ -11,22 +14,18 @@ export class HomePage implements OnInit {
     overlayRect: any;
 
     constructor(
-        private zone: NgZone
-    ) {
+        public modalCtrl: ModalController
+    ) {}
 
-    }
+    ngOnInit() {}
 
-    ngOnInit() {
-        setTimeout(() => {
-            this.calculatePosition();
-        }, 100);
-    }
-
-    calculatePosition() {
-        this.zone.run(() => {
-            const el2 = document.getElementsByClassName('form_bg_overlay')[0];
-            this.overlayRect = el2.getBoundingClientRect();
+    async openSignupModal() {
+        const modal = await this.modalCtrl.create({
+            component: SignupPage
         });
+        return await modal.present();
     }
+
+
 
 }
