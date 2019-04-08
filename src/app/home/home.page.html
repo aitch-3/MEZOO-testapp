@@ -1,14 +1,63 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+    <div class="form_wrapper">
+        <div class="form_bg">
+            <p class="page_title">Login</p>
+            <hr class="title_underbar" width="10%">
+
+            <ion-list class="logForm">
+                <ion-item>
+                    <ion-label position="stacked">
+                        Email
+                    </ion-label>
+                    <ion-input placeholder="Email" type="email"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="stacked">
+                        Password
+                    </ion-label>
+                    <ion-input placeholder="Password" type="password"></ion-input>
+                </ion-item>
+            </ion-list>
+        </div>
+        <div class="form_bg_overlay" [ngStyle]="{'bottom.px': overlayRect ? -overlayRect.height/2 : 0}"></div>
+    </div>
+    <div class="btn_wrapper">
+        <ion-button shape="round" color="dark">Login</ion-button>
+    </div>
+
+    <div class="sso_wrapper">
+        <p>or login with</p>
+
+        <ion-grid no-padding>
+            <ion-row>
+                <ion-col no-padding size="4">
+                    <ion-button fill="outline" color="dark">
+                        <ion-icon slot="icon-only" name="logo-google"></ion-icon>
+                    </ion-button>
+                </ion-col>
+                <ion-col no-padding size="4">
+                    <ion-button fill="outline">
+                        <ion-icon slot="icon-only" name="logo-facebook"></ion-icon>
+                    </ion-button>
+                </ion-col>
+                <ion-col no-padding size="4">
+                    <ion-button fill="outline">
+                        <ion-icon slot="icon-only" name="logo-twitter"></ion-icon>
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+
+    <div class="signup_wrapper">
+        Don't have an account? <a [routerLink]="'/signup'"  routerDirection="forward">SIGN UP</a>
+    </div>
+
 </ion-content>
