@@ -17,14 +17,14 @@
                     <ion-label position="stacked">
                         Email
                     </ion-label>
-                    <ion-input placeholder="Email" type="email"></ion-input>
+                    <ion-input placeholder="Email" type="email" (ionFocus)="emailFormFocus()" [(ngModel)]="loginData.email"></ion-input>
                 </ion-item>
 
                 <ion-item>
                     <ion-label position="stacked">
                         Password
                     </ion-label>
-                    <ion-input placeholder="Password" type="password"></ion-input>
+                    <ion-input placeholder="Password" type="password" [(ngModel)]="loginData.password"></ion-input>
                 </ion-item>
             </ion-list>
         </div>
