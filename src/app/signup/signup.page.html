@@ -21,6 +21,13 @@
             <ion-list class="logForm">
                 <ion-item>
                     <ion-label position="stacked">
+                        Name
+                    </ion-label>
+                    <ion-input placeholder="Let us know your name" type="text"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="stacked">
                         Email
                     </ion-label>
                     <ion-input placeholder="Email is used for login" type="email"></ion-input>
@@ -30,7 +37,7 @@
                     <ion-label position="stacked">
                         Password
                     </ion-label>
-                    <ion-input placeholder="Password" type="password"></ion-input>
+                    <ion-input placeholder="At least 6 characters" type="password"></ion-input>
                 </ion-item>
 
                 <ion-item>
@@ -39,12 +46,29 @@
                     </ion-label>
                     <ion-input placeholder="Confirm Password" type="password"></ion-input>
                 </ion-item>
+
+                <ion-grid no-padding class="terms">
+                    <ion-row>
+                        <ion-col size="10" no-padding>
+                            <ion-item class="terms_item">
+                                <ion-label>I agree to the <a>Terms & Conditions</a>
+                                </ion-label>
+                                <ion-checkbox slot="start" color="dark"></ion-checkbox>
+                            </ion-item>
+                        </ion-col>
+                        <ion-col size="2" no-padding>
+                            <ion-button size="small" (click)="clickTerms()">
+                                <i class="material-icons">open_in_new</i>
+                            </ion-button>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
             </ion-list>
         </div>
     </div>
 
     <div class="btn_wrapper">
-        <ion-button shape="round" color="dark">Sign Up</ion-button>
+        <ion-button shape="round" color="dark" (click)="clickSignup()">Sign Up</ion-button>
     </div>
 
     <div class="sso_wrapper">
@@ -71,7 +95,5 @@
         </ion-grid>
     </div>
 
-    <div class="signup_wrapper">
-        Don't have an account? <a>SIGN UP</a>
-    </div>
+
 </ion-content>

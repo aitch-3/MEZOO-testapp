@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons>
+            <ion-button (click)="closeModal()" color="light">
+                <ion-icon slot="icon-only" name="close"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="log_form_wrapper">
+        <svg height="100%" width="100%">
+            <ellipse cx="50%" cy="0" rx="160%" ry="100%" fill="#E93B44" />
+        </svg>
+
+        <div class="form_bg">
+            <p class="page_title">Find Password</p>
+            <hr class="title_underbar" width="10%">
+
+            <ion-list class="logForm">
+
+                <ion-item>
+                    <ion-label position="stacked">
+                        Email
+                    </ion-label>
+                    <ion-input placeholder="Email address used for login" type="email"></ion-input>
+                </ion-item>
+
+            </ion-list>
+        </div>
+    </div>
+
+    <div class="btn_wrapper">
+        <ion-button shape="round" color="dark" (click)="clickFindPW()">Find Password</ion-button>
+    </div>
+
+    <div class="sso_wrapper">
+        <p>We will send you a password reset link to your email.</p>
+
+
+    </div>
+
+
+
+</ion-content>

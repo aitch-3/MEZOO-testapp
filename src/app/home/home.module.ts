@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { HomePage } from './home.page';
 
 import { SignupPage } from '../signup/signup.page';
+import { FindpwPage } from '../findpw/findpw.page';
 
 @NgModule({
     imports: [
@@ -22,13 +23,16 @@ import { SignupPage } from '../signup/signup.page';
     ],
     declarations: [
         HomePage,
-        SignupPage
+        SignupPage,
+        FindpwPage
     ],
     entryComponents: [
-        SignupPage
+        SignupPage,
+        FindpwPage
     ],
     exports: [
-        SignupPage
+        SignupPage,
+        FindpwPage
     ]
 })
 export class HomePageModule { }

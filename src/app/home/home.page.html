@@ -2,7 +2,7 @@
     <ion-toolbar></ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen="true">
     <div class="log_form_wrapper">
         <svg height="100%" width="100%">
             <ellipse cx="50%" cy="0" rx="160%" ry="100%" fill="#E93B44" />
@@ -31,7 +31,7 @@
     </div>
 
     <div class="btn_wrapper">
-        <ion-button shape="round" color="dark">Login</ion-button>
+        <ion-button shape="round" color="dark" (click)="clickLogin()">Login</ion-button>
     </div>
 
     <div class="sso_wrapper">

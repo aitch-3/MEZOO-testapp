@@ -1,0 +1,27 @@
+.header-md:after {
+    background-image: none !important;
+}
+
+.header-ios ion-toolbar:last-child {
+    --border-width: 0;
+}
+
+ion-toolbar {
+    --background: transparent !important;
+}
+
+ion-content {
+    --background: -webkit-linear-gradient(top, var(--ion-color-primary) 0%,var(--ion-color-primary) 30%,var(--ion-color-medium-contrast) 40%,var(--ion-color-medium-contrast) 100%); /* Chrome10-25,Safari5.1-6 */
+    --background: linear-gradient(to bottom, var(--ion-color-primary) 0%,var(--ion-color-primary) 30%,var(--ion-color-medium-contrast) 40%,var(--ion-color-medium-contrast) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.divider_col {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .divider {
+        text-align: right;
+        --color: var(--ion-color-dark-tint);
+    }
+}

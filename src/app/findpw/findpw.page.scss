@@ -13,10 +13,6 @@ ion-header {
     }
 }
 
-ion-toolbar[_ngcontent-c0] {
-    --background: transparent !important;
-}
-
 ion-content {
     --background: -webkit-linear-gradient(top, var(--ion-color-primary) 0%,var(--ion-color-primary) 30%,var(--ion-color-medium-contrast) 40%,var(--ion-color-medium-contrast) 100%); /* Chrome10-25,Safari5.1-6 */
     --background: linear-gradient(to bottom, var(--ion-color-primary) 0%,var(--ion-color-primary) 30%,var(--ion-color-medium-contrast) 40%,var(--ion-color-medium-contrast) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -24,7 +20,7 @@ ion-content {
 
 .log_form_wrapper{
     width: 100%;
-    height: 60%;
+    height: 70%;
     position: relative;
 }
 
@@ -55,9 +51,10 @@ ion-content {
 
 .logForm {
     background: transparent;        
-    margin-top: 20%;
+    margin-top: 25%;
+    margin-bottom: 25%;
     ion-item {
-        --border-color: rgba(255, 255, 255, 0.9);
+        --border-color: rgba(var(--ion-color-light-rgb), 0.9);
         --highlight-color-focused: none;
         --background: transparent;
         --padding-start: 0;
@@ -71,6 +68,30 @@ ion-content {
 
             input::placeholder {
                 color: var(--ion-color-medium-contrast);
+            }
+        }
+    }
+
+    .terms {
+        ion-row {
+            display: flex;
+            align-items: center;
+        }
+
+        .terms_item {
+            --border-color: transparent;
+    
+            ion-label {
+                font-size: 0.9rem;
+    
+                a {
+                    font-weight: bold;
+                    color: var(--ion-color-medium-contrast);
+                }
+            }
+            ion-checkbox {
+                width: 20px;
+                height: 20px;
             }
         }
     }

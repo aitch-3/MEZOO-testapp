@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 
 @Component({
-    selector: 'app-signup',
-    templateUrl: './signup.page.html',
-    styleUrls: ['./signup.page.scss'],
+    selector: 'app-findpw',
+    templateUrl: './findpw.page.html',
+    styleUrls: ['./findpw.page.scss'],
 })
-export class SignupPage implements OnInit {
+export class FindpwPage implements OnInit {
 
     constructor(
         public modalCtrl: ModalController
@@ -19,11 +19,7 @@ export class SignupPage implements OnInit {
         this.modalCtrl.dismiss();
     }
 
-    clickTerms() {
-        console.log('----aa----');
-    }
-
-    clickSignup() {
+    clickFindPW() {
         this.closeModal();
     }
 

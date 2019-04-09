@@ -1,0 +1,127 @@
+<ion-content fullscreen="true">
+    <div class="main_block">
+        <div class="avatar">
+            DP
+        </div>
+    </div>
+
+    <ion-list class="learn_block info_block">
+        <ion-item lines="none">
+            <ion-icon slot="start" color="secondary" name="information-circle"></ion-icon>
+            <ion-grid no-padding>
+                <ion-row>
+                    <ion-col no-padding size="10">
+                        <ion-label text-wrap>
+                            <ion-text color="dark-tint">
+                                <h3>Learn more about TalkBody</h3>
+                            </ion-text>
+                        </ion-label>
+                    </ion-col>
+                    <ion-col no-padding size="2" class="divider_col">
+                        <ion-label class="divider">|</ion-label>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <ion-button color="dark" fill="clear" slot="end" (click)="clickLearnTalkBody()">
+                <ion-icon slot="icon-only" name="arrow-round-forward"></ion-icon>
+            </ion-button>
+        </ion-item>
+    </ion-list>
+
+    <ion-list lines="none" class="toggle_device_block info_block">
+        <ion-item>
+            <ion-icon slot="start" color="tertiary" name="help-circle"></ion-icon>
+            <ion-grid no-padding>
+                <ion-row>
+                    <ion-col no-padding size="10">
+                        <ion-label text-wrap>
+                            <ion-text color="dark-tint">
+                                <h3>No paired devices</h3>
+                            </ion-text>
+                            <p>Tap to pair device</p>
+                        </ion-label>
+                    </ion-col>
+                    <ion-col no-padding size="2" class="divider_col">
+                        <ion-label class="divider">|</ion-label>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <ion-button color="dark" fill="clear" slot="end" (click)="clickPairDevice()">
+                <ion-icon slot="icon-only" name="bluetooth"></ion-icon>
+            </ion-button>
+        </ion-item>
+    </ion-list>
+
+    <ion-list lines="none" class="history_block info_block">
+        <ion-item>
+            <ion-icon slot="start" color="warning" name="cloud-circle"></ion-icon>
+            <ion-grid no-padding>
+                <ion-row>
+                    <ion-col no-padding size="10">
+                        <ion-label text-wrap>
+                            <ion-text color="dark-tint">
+                                <h3>History</h3>
+                            </ion-text>
+                            <p>Tap right icon to view more</p>
+                        </ion-label>
+                    </ion-col>
+                    <ion-col no-padding size="2" class="divider_col">
+                        <ion-label class="divider">|</ion-label>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <ion-button color="dark" fill="clear" slot="end" (click)="clickMoreHistory()">
+                <ion-icon slot="icon-only" name="albums"></ion-icon>
+            </ion-button>
+        </ion-item>
+
+        <ion-item class="no_history">
+            <ion-label>No history available</ion-label>
+        </ion-item>
+
+    </ion-list>
+
+    <ion-list lines="none" class="history_block info_block">
+        <ion-item>
+            <ion-icon slot="start" color="warning" name="cloud-circle"></ion-icon>
+            <ion-grid no-padding>
+                <ion-row>
+                    <ion-col no-padding size="10">
+                        <ion-label text-wrap>
+                            <ion-text color="dark-tint">
+                                <h3>History</h3>
+                            </ion-text>
+                            <p>Tap right icon to view more</p>
+                        </ion-label>
+                    </ion-col>
+                    <ion-col no-padding size="2" class="divider_col">
+                        <ion-label class="divider">|</ion-label>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <ion-button color="dark" fill="clear" slot="end" (click)="clickMoreHistory()">
+                <ion-icon slot="icon-only" name="albums"></ion-icon>
+            </ion-button>
+        </ion-item>
+
+        <ion-item>
+            <ion-card>
+                <ion-card-header color="success">
+                    <ion-grid no-padding>
+                        <ion-row class="history_stats">
+                            <ion-col no-padding size="10">
+                                <ion-card-subtitle color="light">04/09/2019 13:31:23</ion-card-subtitle>
+                                <ion-card-title color="light">Normal</ion-card-title>
+                            </ion-col>
+                            <ion-col no-padding>
+                                <span>90</span>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </ion-card-header>
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
+            </ion-card>
+        </ion-item>
+
+    </ion-list>
+</ion-content>
